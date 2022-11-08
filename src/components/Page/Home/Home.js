@@ -2,6 +2,7 @@ import React from "react";
 import useTitle from "../../hooks/useTitle";
 import Carousel from "../Banner/Carousel";
 import Serverces from "../Services/Services";
+import Start from "../StatArea/Start";
 
 const Home = () => {
   useTitle("Home");
@@ -10,6 +11,7 @@ const Home = () => {
       <div className="">
         <Carousel></Carousel>
         <Serverces></Serverces>
+        <Start></Start>
       </div>
     </div>
   );
