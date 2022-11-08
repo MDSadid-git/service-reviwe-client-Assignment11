@@ -65,7 +65,7 @@ const Header = () => {
             </ul>
           </div>
           <Link to="/" className="text-light font-bold text-decoration-none">
-            Sports Photographer
+            Sports PG
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -105,19 +105,19 @@ const Header = () => {
             {user?.uid ? (
               <button
                 onClick={handleLogOut}
-                className="mx-2 btn btn-outline  font-bold"
+                className="mx-2 btn btn-outline btn-sm font-bold"
               >
                 Log Out
               </button>
             ) : (
               <>
                 <Link to="/login">
-                  <button className="mr-2 btn btn-outline  font-bold">
+                  <button className="mr-2 btn btn-outline btn-sm font-bold">
                     Log in
                   </button>
                 </Link>
                 <Link to="/register">
-                  <button className="btn btn-outline  font-bold">
+                  <button className="btn btn-outline btn-sm font-bold">
                     Register
                   </button>
                 </Link>

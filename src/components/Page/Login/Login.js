@@ -4,10 +4,12 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../../UserContext/UserContext";
 import { FaGoogle } from "react-icons/fa";
 import { GoogleAuthProvider } from "firebase/auth";
+import useTitle from "../../hooks/useTitle";
 
 const googleProvider = new GoogleAuthProvider();
 
 const Login = () => {
+  useTitle("Login");
   const { logInUser, googleUserRegister } = useContext(AuthContext);
   const handleFrom = (event) => {
     event.preventDefault();

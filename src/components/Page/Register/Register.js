@@ -3,10 +3,12 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../UserContext/UserContext";
 import { FaGoogle } from "react-icons/fa";
+import useTitle from "../../hooks/useTitle";
 
 const googleProvider = new GoogleAuthProvider();
 
 const Register = () => {
+  useTitle("Register");
   const { newUserRegister, googleUserRegister } = useContext(AuthContext);
   const handleFrom = (event) => {
     event.preventDefault();
