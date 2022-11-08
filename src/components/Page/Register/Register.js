@@ -36,7 +36,7 @@ const Register = () => {
         <div className="text-center lg:text-left w-1/2 ">
           <img src="" alt="" />
         </div>
-        <div className="card flex-shrink-0  max-w-sm shadow-2xl bg-base-100 w-1/2">
+        <div className="card  shadow-2xl bg-base-100 w-96 pt-10">
           <h1 className="text-5xl font-bold text-center">Sine Up</h1>
           <form onSubmit={handleFrom} className="card-body">
             <div className="form-control">
@@ -93,16 +93,16 @@ const Register = () => {
                 value="Register"
               />
             </div>
-            <div>
-              <button
-                onClick={UserGoogle}
-                className="btn btn-sm w-full btn-outline btn-info"
-                title="Sing in With google"
-              >
-                <FaGoogle />
-              </button>
-            </div>
           </form>
+          <div>
+            <button
+              onClick={UserGoogle}
+              className="btn btn-sm w-full btn-outline btn-info"
+              title="Sing in With google"
+            >
+              <FaGoogle />
+            </button>
+          </div>
         </div>
       </div>
     </div>
