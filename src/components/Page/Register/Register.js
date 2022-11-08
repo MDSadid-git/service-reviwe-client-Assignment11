@@ -32,77 +32,68 @@ const Register = () => {
   };
   return (
     <div className="hero py-20">
-      <div className="hero-content gap-20 flex-col lg:flex-row">
-        <div className="text-center lg:text-left w-1/2 ">
-          <img src="" alt="" />
-        </div>
-        <div className="card  shadow-2xl bg-base-100 w-96 pt-10">
-          <h1 className="text-5xl font-bold text-center">Sine Up</h1>
-          <form onSubmit={handleFrom} className="card-body">
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Name</span>
-              </label>
-              <input
-                type="text"
-                placeholder="Name"
-                name="Name"
-                className="input input-bordered"
-                required
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Email</span>
-              </label>
-              <input
-                type="text"
-                placeholder="email"
-                name="email"
-                className="input input-bordered"
-                required
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Password</span>
-              </label>
-              <input
-                type="text"
-                placeholder="password"
-                name="password"
-                className="input input-bordered"
-                required
-              />
-              <label className="label">
-                <p className="text-center">
-                  Already have an account{" "}
-                  <Link
-                    to={`/login`}
-                    className="label-text-alt link link-hover text-orange-600 font-bold"
-                  >
-                    Login
-                  </Link>
-                </p>
-              </label>
-            </div>
-            <div className="form-control mt-6">
-              <input
-                className="btn btn-primary"
-                type="submit"
-                value="Register"
-              />
-            </div>
-          </form>
-          <div>
-            <button
-              onClick={UserGoogle}
-              className="btn btn-sm w-full btn-outline btn-info"
-              title="Sing in With google"
-            >
-              <FaGoogle />
-            </button>
+      <div className="card  shadow-2xl bg-base-100 w-96 pt-10">
+        <h1 className="text-5xl font-bold text-center">Sine Up</h1>
+        <form onSubmit={handleFrom} className="card-body">
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Name</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Name"
+              name="Name"
+              className="input input-bordered"
+              required
+            />
           </div>
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Email</span>
+            </label>
+            <input
+              type="text"
+              placeholder="email"
+              name="email"
+              className="input input-bordered"
+              required
+            />
+          </div>
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Password</span>
+            </label>
+            <input
+              type="text"
+              placeholder="password"
+              name="password"
+              className="input input-bordered"
+              required
+            />
+            <label className="label">
+              <p className="text-center">
+                Already have an account{" "}
+                <Link
+                  to={`/login`}
+                  className="label-text-alt link link-hover text-orange-600 font-bold"
+                >
+                  Login
+                </Link>
+              </p>
+            </label>
+          </div>
+          <div className="form-control mt-6">
+            <input className="btn btn-primary" type="submit" value="Register" />
+          </div>
+        </form>
+        <div>
+          <button
+            onClick={UserGoogle}
+            className="btn btn-sm w-full btn-outline btn-info"
+            title="Sing in With google"
+          >
+            <FaGoogle />
+          </button>
         </div>
       </div>
     </div>
