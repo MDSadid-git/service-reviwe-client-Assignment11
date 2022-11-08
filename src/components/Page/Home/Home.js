@@ -6,7 +6,9 @@ const Home = () => {
   useTitle("Home");
   return (
     <div className="w-4/5 mx-auto py-20">
-      <Carousel></Carousel>
+      <div className="">
+        <Carousel></Carousel>
+      </div>
     </div>
   );
 };
