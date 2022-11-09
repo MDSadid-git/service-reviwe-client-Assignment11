@@ -20,7 +20,7 @@ const Start = () => {
               <br />
               FIFA World Cup history.
             </p>
-            <button className="btn btn-primary">Get Started</button>
+            <button className="btn btn-secondary">More Info</button>
           </div>
         </div>
       </div>

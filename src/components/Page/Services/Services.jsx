@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import ServicesCart from "./ServicesCart";
 
 const Services = () => {
   const [Services, setServices] = useState([]);
   useEffect(() => {
-    fetch("services.json")
+    fetch("http://localhost:5000/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
   return (
-    <div className="my-10 mx-auto py-10  rounded">
+    <div className="my-10 py-10 mx-auto">
+      <hr />
       <div className="text-center mb-4">
         <p className="text-5xl font-extrabold text-cyan-400">Our Services</p>
         <h2 className="text-5xl font-semibold my-7">Sports PhotoGrapher</h2>
@@ -27,6 +29,10 @@ const Services = () => {
           <ServicesCart key={ser._id} ser={ser}></ServicesCart>
         ))}
       </div>
+
+      <Link to={`/servicespage`}>
+        <button className="btn w-full mx-auto btn-outline">See all</button>
+      </Link>
     </div>
   );
 };
