@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ServicesCart = ({ ser }) => {
   return (
-    <div className="card w-96 glass mx-auto my-9">
+    <div className="card w-4/5 glass mx-auto my-9">
       <figure>
         <img src={ser.img} alt="car!" />
       </figure>

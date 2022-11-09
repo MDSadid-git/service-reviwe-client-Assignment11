@@ -3,7 +3,7 @@ import React from "react";
 const Start = () => {
   return (
     <div>
-      <div className="hero py-10 bg-base-200">
+      <div className="hero bg-slate-100 rounded my-10">
         <div className="hero-content  flex-col lg:flex-row-reverse">
           <img
             src="https://placeimg.com/260/400/arch"

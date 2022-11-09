@@ -9,9 +9,9 @@ const Services = () => {
       .then((data) => setServices(data));
   }, []);
   return (
-    <div className="my-10 mx-auto">
+    <div className="my-10 mx-auto py-10 bg-slate-100 rounded">
       <div className="text-center mb-4">
-        <p className="text-2xl font-bold text-orange-600">Services</p>
+        <p className="text-5xl font-extrabold text-cyan-400">Our Services</p>
         <h2 className="text-5xl font-semibold my-7">Sports PhotoGrapher</h2>
         <p>
           Sport is a dominant force in people’s lives. It’s an obsession for{" "}
