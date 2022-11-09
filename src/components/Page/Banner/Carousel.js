@@ -5,7 +5,7 @@ const Carousel = () => {
     <div className="carousel w-4/5 mx-auto rounded-lg h-96 min-h-full">
       <div id="slide1" className="carousel-item relative w-full ">
         <img
-          src="https://img.freepik.com/premium-photo/soccer-ball-national-iraq-flag-iraq-football-ball_559531-19887.jpg?w=2000"
+          src="https://www.marmoremena.com/uploads/blog_images/1664268976.jpg"
           alt=""
           className="w-full"
         />

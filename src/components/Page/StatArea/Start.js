@@ -3,25 +3,28 @@ import React from "react";
 const Start = () => {
   return (
     <div>
-      <div className="hero bg-slate-100 rounded my-10">
+      <hr />
+      <div className="hero  rounded my-10">
         <div className="hero-content  flex-col lg:flex-row-reverse">
           <img
-            src="https://placeimg.com/260/400/arch"
+            src="https://img.freepik.com/premium-photo/soccer-ball-world-cup-qatar-2022-3d-illustration_298175-190.jpg?w=2000"
             className="max-w-sm rounded-lg shadow-2xl mx-5"
             alt=""
           />
           <div className="mx-5">
-            <h1 className="text-4xl font-bold">Sports PhotoGrapher Office!</h1>
+            <h1 className="text-4xl font-bold">Countdown to Qatar 2022!</h1>
             <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda{" "}
+              As we count down to the start of the global showpiece in Qatar on{" "}
               <br />
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
+              20 November, FIFA+ is showcasing 100 of the greatest moments in{" "}
+              <br />
+              FIFA World Cup history.
             </p>
             <button className="btn btn-primary">Get Started</button>
           </div>
         </div>
       </div>
+      <hr />
     </div>
   );
 };

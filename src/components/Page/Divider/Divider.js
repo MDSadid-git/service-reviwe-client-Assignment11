@@ -53,7 +53,7 @@ const Divider = () => {
                 <div className="avatar online">
                   <div className="w-16 rounded-full">
                     <img
-                      src="https://img.freepik.com/premium-photo/soccer-ball-national-iraq-flag-iraq-football-ball_559531-19887.jpg?w=2000"
+                      src="https://static.vecteezy.com/system/resources/previews/007/487/436/original/qatar-cup-world-2022-abstract-soccer-background-world-cup-banner-illustration-football-competition-symbol-vector.jpg"
                       alt=""
                     />
                   </div>
@@ -68,7 +68,7 @@ const Divider = () => {
         <div className="divider lg:divider-horizontal">OR</div>
         <div className="grid flex-grow h-32 card  rounded-box place-items-center">
           <div
-            className="radial-progress bg-primary text-primary-content border-4 border-primary"
+            className="radial-progress bg-secondary text-secondary-content border-4 border-secondary"
             style={{ "--value": 86 }}
           >
             86%
