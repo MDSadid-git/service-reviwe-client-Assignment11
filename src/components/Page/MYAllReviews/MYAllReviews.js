@@ -55,7 +55,7 @@ const MYAllReviews = () => {
   return (
     <div>
       <h1 className="flex justify-center text-3xl my-11 font-bold">
-        My All Reviews
+        {Reviews.length !== 0 ? "My All Reviews" : "No Reviews were added"}
       </h1>
       <div className="overflow-x-auto w-full">
         {Reviews?.map((rev) => (
