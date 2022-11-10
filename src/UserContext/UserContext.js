@@ -43,16 +43,13 @@ const UserContext = ({ children }) => {
   const newUserRegister = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
-  const userProfileUpDate = (profile) => {
-    return updateProfile(auth.currentUser, profile);
-  };
+
   const authInFo = {
     user,
     loadin,
     googleUserRegister,
     logOut,
     newUserRegister,
-    userProfileUpDate,
     logInUser,
   };
   return (

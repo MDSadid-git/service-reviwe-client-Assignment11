@@ -25,7 +25,7 @@ const Login = () => {
         const currentUser = {
           email: user.email,
         };
-        fetch("http://localhost:5000/jwt", {
+        fetch("https://service-review-server-weld.vercel.app/jwt", {
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -48,7 +48,7 @@ const Login = () => {
         const currentUser = {
           email: user.email,
         };
-        fetch("http://localhost:5000/jwt", {
+        fetch("https://service-review-server-weld.vercel.app/jwt", {
           method: "POST",
           headers: {
             "content-type": "application/json",

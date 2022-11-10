@@ -17,7 +17,7 @@ const Newservices = () => {
       price,
       description,
     };
-    fetch("http://localhost:5000/servicespage", {
+    fetch("https://service-review-server-weld.vercel.app/servicespage", {
       method: "POST",
       headers: {
         "content-type": "application/json",

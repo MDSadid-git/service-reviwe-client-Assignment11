@@ -11,7 +11,7 @@ const Edit = () => {
   const { id } = useParams();
   const { user } = useContext(AuthContext);
   useEffect(() => {
-    fetch(`http://localhost:5000/addreviews/${id}`)
+    fetch(`https://service-review-server-weld.vercel.app/addreviews/${id}`)
       .then((res) => res.json())
       .then((data) => {
         if (data) {
@@ -36,7 +36,7 @@ const Edit = () => {
       message,
     };
     console.log(Reviews);
-    fetch(`http://localhost:5000/addreviews/${id}`, {
+    fetch(`https://service-review-server-weld.vercel.app/addreviews/${id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
