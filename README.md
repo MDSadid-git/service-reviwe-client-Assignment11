@@ -16,6 +16,14 @@
 
 # Used Vercel
 
+# Used Express
+
+# Used MongoDB
+
+# Used JWT
+
+# Used Cors
+
 # Summary :
 
 1: This is a simple Online MERN Quiz site Developed my react-js <br>
