@@ -10,9 +10,15 @@ const MYAllReviews = () => {
   console.log(Reviews);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/addreviews?email=${user?.email}`)
+    fetch(`http://localhost:5000/addreviews?email=${user?.email}`, {
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    })
       .then((res) => res.json())
-      .then((data) => setReviews(data));
+      .then((data) => {
+        setReviews(data);
+      });
   }, [user?.email]);
   const handleDelete = (id) => {
     const proceed = window.confirm(
@@ -44,7 +50,7 @@ const MYAllReviews = () => {
         My All Reviews
       </h1>
       <div className="overflow-x-auto w-full">
-        {Reviews.map((rev) => (
+        {Reviews?.map((rev) => (
           <MYAllReviewsCol
             key={rev._id}
             rev={rev}

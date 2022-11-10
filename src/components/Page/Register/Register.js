@@ -21,6 +21,7 @@ const Register = () => {
     newUserRegister(email, password)
       .then((reslue) => {
         const user = reslue.user;
+        navigate(from2, { replace: true });
         console.log(user);
       })
       .catch((er) => console.error(er));
@@ -30,8 +31,21 @@ const Register = () => {
     googleUserRegister(googleProvider)
       .then((resul) => {
         const user = resul.user;
-        navigate(from2, { replace: true });
-        console.log(user);
+        const currentUser = {
+          email: user.email,
+        };
+        fetch("http://localhost:5000/jwt", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(currentUser),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            localStorage.setItem("token", data.token);
+            navigate(from2, { replace: true });
+          });
       })
       .catch((e) => console.error(e));
   };
@@ -69,7 +83,7 @@ const Register = () => {
               <span className="label-text">Password</span>
             </label>
             <input
-              type="text"
+              type="password"
               placeholder="password"
               name="password"
               className="input input-bordered"
