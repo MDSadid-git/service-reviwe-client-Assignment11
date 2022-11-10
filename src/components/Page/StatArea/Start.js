@@ -8,7 +8,7 @@ const Start = () => {
         <div className="hero-content  flex-col lg:flex-row-reverse">
           <img
             src="https://img.freepik.com/premium-photo/soccer-ball-world-cup-qatar-2022-3d-illustration_298175-190.jpg?w=2000"
-            className="max-w-sm rounded-lg shadow-2xl mx-5"
+            className="w-4/5 lg:w-2/5 rounded-lg shadow-2xl mx-5"
             alt=""
           />
           <div className="mx-5">
