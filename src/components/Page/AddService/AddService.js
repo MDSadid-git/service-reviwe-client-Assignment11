@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import useTitle from "../../../hooks/useTitle";
-import ServicesCart from "../ServicesCart";
+import useTitle from "../../hooks/useTitle";
+import ServicesCart from "../Services/ServicesCart";
 
-const ServicesPage = () => {
-  useTitle("services");
+const AddService = () => {
+  useTitle("Add Service");
   const [Services, setServices] = useState([]);
   useEffect(() => {
     fetch("http://localhost:5000/servicespage")
@@ -12,10 +12,11 @@ const ServicesPage = () => {
       .then((data) => setServices(data));
   }, []);
   return (
-    <div className="w-4/5 mx-auto py-20">
-      <div className="flex justify-center">
-        <Link to={"/newservices"}>
-          <button className="btn btn-active btn-secondary">Add Service</button>
+    <div className="w-4/5 mx-auto">
+      <div className="flex justify-center m-10">
+        <Link to={`/newservices`}>
+          {" "}
+          <button className="btn btn-secondary mx-2">Add Servce</button>
         </Link>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
@@ -27,4 +28,4 @@ const ServicesPage = () => {
   );
 };
 
-export default ServicesPage;
+export default AddService;

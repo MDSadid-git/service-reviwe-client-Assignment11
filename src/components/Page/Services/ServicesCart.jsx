@@ -17,7 +17,7 @@ const ServicesCart = ({ ser: { img, title, _id, description, price } }) => {
         <h2 className="card-title">{title}</h2>
         <p>${price}</p>
         <p>
-          {description.length > 60 ? (
+          {description?.length > 60 ? (
             <>{description.slice(0, 60) + "..."}</>
           ) : (
             description

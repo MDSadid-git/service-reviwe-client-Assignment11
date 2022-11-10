@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../UserContext/UserContext";
+import useTitle from "../../hooks/useTitle";
 
 const Header = () => {
+  useTitle("Myallreviews");
   const { user, logOut } = useContext(AuthContext);
   const handleLogOut = () => {
     logOut()
@@ -40,9 +42,18 @@ const Header = () => {
               <li tabIndex={0}>
                 <Link to={"/blog"}>Blog</Link>
               </li>
-              <li>
-                <Link>Item 3</Link>
-              </li>
+              {user?.uid ? (
+                <>
+                  <li>
+                    <Link to={`/addservices`}>Add Service</Link>
+                  </li>
+                  <li>
+                    <Link to={`/myallreviews`}>My Reviews</Link>
+                  </li>
+                </>
+              ) : (
+                ""
+              )}
             </ul>
           </div>
           <Link to="/" className="text-light font-bold text-decoration-none">
@@ -57,9 +68,18 @@ const Header = () => {
             <li tabIndex={0}>
               <Link to={"/blog"}>Blog</Link>
             </li>
-            <li>
-              <Link>Item 3</Link>
-            </li>
+            {user?.uid ? (
+              <>
+                <li>
+                  <Link to={`/addservices`}>Add Service</Link>
+                </li>
+                <li>
+                  <Link to={`/myallreviews`}>My Reviews</Link>
+                </li>
+              </>
+            ) : (
+              ""
+            )}
           </ul>
         </div>
         <div className="navbar-end">

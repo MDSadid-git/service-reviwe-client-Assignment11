@@ -29,10 +29,11 @@ const Services = () => {
           <ServicesCart key={ser._id} ser={ser}></ServicesCart>
         ))}
       </div>
-
-      <Link to={`/servicespage`}>
-        <button className="btn w-full mx-auto btn-outline">See all</button>
-      </Link>
+      <div className="flex justify-center">
+        <Link to={`/servicespage`}>
+          <button className="btn mx-auto btn-outline">See all</button>
+        </Link>
+      </div>
     </div>
   );
 };

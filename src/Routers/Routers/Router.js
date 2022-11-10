@@ -5,6 +5,12 @@ import Main from "../../Layout/Main";
 import Details from "../../components/Page/Home/Details/Details";
 import ServicesPage from "../../components/Page/Services/ServicesPage/ServicesPage";
 import Blog from "../../components/Page/Blog/Blog";
+import AddService from "../../components/Page/AddService/AddService";
+import MyReview from "../../components/Page/MyReview/MyReview";
+import PrivateRoute from "../../components/PrivateRoute/PrivateRoute";
+import Newservices from "../../components/Page/Newservices/Newservices";
+import MYAllReviews from "../../components/Page/MYAllReviews/MYAllReviews";
+import Edit from "../../components/Page/Edit/Edit";
 
 const { createBrowserRouter } = require("react-router-dom");
 
@@ -42,6 +48,39 @@ export const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog></Blog>,
+      },
+      {
+        path: "/addservices",
+        element: (
+          <PrivateRoute>
+            <AddService></AddService>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/myreviews",
+        element: (
+          <PrivateRoute>
+            <MyReview></MyReview>
+          </PrivateRoute>
+        ),
+        loader: () => fetch("http://localhost:5000/servicespage"),
+      },
+      {
+        path: "/newservices",
+        element: <Newservices></Newservices>,
+      },
+      {
+        path: "/myallreviews",
+        element: (
+          <PrivateRoute>
+            <MYAllReviews></MYAllReviews>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/edit/:id",
+        element: <Edit></Edit>,
       },
     ],
   },

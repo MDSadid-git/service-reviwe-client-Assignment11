@@ -1,6 +1,6 @@
 import { GoogleAuthProvider } from "firebase/auth";
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../UserContext/UserContext";
 import { FaGoogle } from "react-icons/fa";
 import useTitle from "../../hooks/useTitle";
@@ -9,6 +9,9 @@ const googleProvider = new GoogleAuthProvider();
 
 const Register = () => {
   useTitle("Register");
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from2 = location.state?.from?.pathname || "/";
   const { newUserRegister, googleUserRegister } = useContext(AuthContext);
   const handleFrom = (event) => {
     event.preventDefault();
@@ -27,7 +30,7 @@ const Register = () => {
     googleUserRegister(googleProvider)
       .then((resul) => {
         const user = resul.user;
-        // navigate(from2, { replace: true });
+        navigate(from2, { replace: true });
         console.log(user);
       })
       .catch((e) => console.error(e));
