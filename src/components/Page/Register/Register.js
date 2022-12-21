@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../UserContext/UserContext";
 import { FaGoogle } from "react-icons/fa";
 import useTitle from "../../hooks/useTitle";
+import { toast } from "react-hot-toast";
 
 const googleProvider = new GoogleAuthProvider();
 
@@ -21,6 +22,7 @@ const Register = () => {
     newUserRegister(email, password)
       .then((reslue) => {
         const user = reslue.user;
+        toast.success("Register done!!!");
         navigate(from2, { replace: true });
         console.log(user);
       })
@@ -44,6 +46,7 @@ const Register = () => {
           .then((res) => res.json())
           .then((data) => {
             localStorage.setItem("token", data.token);
+            toast.success("Rigister done with Google!!!");
             navigate(from2, { replace: true });
           });
       })
