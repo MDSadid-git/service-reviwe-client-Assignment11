@@ -5,6 +5,7 @@ import { AuthContext } from "../../../UserContext/UserContext";
 import { FaGoogle } from "react-icons/fa";
 import { GoogleAuthProvider } from "firebase/auth";
 import useTitle from "../../hooks/useTitle";
+import { toast } from "react-hot-toast";
 
 const googleProvider = new GoogleAuthProvider();
 
@@ -35,6 +36,7 @@ const Login = () => {
           .then((res) => res.json())
           .then((data) => {
             localStorage.setItem("token", data.token);
+            toast.success("Loging Success!!!");
             navigate(from2, { replace: true });
           });
       })
@@ -58,6 +60,7 @@ const Login = () => {
           .then((res) => res.json())
           .then((data) => {
             localStorage.setItem("token", data.token);
+            toast.success("Loging Success with google!!!");
             navigate(from2, { replace: true });
           });
       })
